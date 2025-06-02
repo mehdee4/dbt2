@@ -2,6 +2,10 @@
 target/
 dbt_packages/
 dbt_modules/
+logs/
+manifest.json
+run_results.json
+*.log
 
 # Ignore Python virtual environment
 .venv/
