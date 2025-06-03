@@ -27,7 +27,7 @@ jobs:
     - name: Create profiles.yml
       run: |
         mkdir -p ~/.dbt
-        echo "your_project_name:" > ~/.dbt/profiles.yml
+        echo "dbt_snowflake_project_1:" > ~/.dbt/profiles.yml
         echo "  outputs:" >> ~/.dbt/profiles.yml
         echo "    dev:" >> ~/.dbt/profiles.yml
         echo "      type: snowflake" >> ~/.dbt/profiles.yml
