@@ -1,0 +1,17 @@
+dbt_snowflake_project_1:
+  target: dev
+  outputs:
+    dev:
+      database: DBT_HOL_DEV
+      role: dbt_dev_role
+      schema: public
+      threads: 200
+      type: snowflake
+      warehouse: dbt_dev_wh
+    prod:
+      database: DBT_HOL_PROD
+      role: dbt_prod_role
+      schema: public
+      threads: 200
+      type: snowflake
+      warehouse: dbt_prod_wh
