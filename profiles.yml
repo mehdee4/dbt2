@@ -1,17 +1,19 @@
 dbt_snowflake_project_1:
-  target: dev
-  outputs:
-    dev:
-      database: DBT_HOL_DEV
-      role: dbt_dev_role
-      schema: public
-      threads: 200
-      type: snowflake
-      warehouse: dbt_dev_wh
-    prod:
-      database: DBT_HOL_PROD
-      role: dbt_prod_role
-      schema: public
-      threads: 200
-      type: snowflake
-      warehouse: dbt_prod_wh
+target: dev
+outputs:
+  dev:
+    type: snowflake
+    account: 'not needed'
+    user: 'not needed'
+    role: accountadmin
+    database: DBT_HOL_DEV
+    schema: public
+    warehouse: dbt_dev_wh
+  prod:
+    type: snowflake
+    account: 'not needed'
+    user: 'not needed'
+    role: accountadmin
+    database: DBT_HOL_PROD
+    schema: public
+    warehouse: dbt_prod_wh
