@@ -1,0 +1,15 @@
+# Ignore dbt target and compiled files
+target/
+dbt_packages/
+dbt_modules/
+ 
+# Ignore Python virtual environment
+.venv/
+venv/
+ 
+# Ignore IDE/project files
+.vscode/
+.idea/
+ 
+# Ignore sensitive config
+.dbt/
