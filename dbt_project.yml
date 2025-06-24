@@ -1,36 +1,66 @@
+# dbt_project.yml
 
-# Name your project! Project names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
 name: 'dbt_project_2'
 version: '1.0.0'
+profile: 'jaffle_shop'
 
-# This setting configures which "profile" dbt uses for this project.
-profile: 'dbt_project_2'
+vars:
+  snowflake_schemas:
+    - name: CONFIGS
+    - name: RAW_DATA
+    - name: STG_PIM
+    - name: STG_SAP
+    - name: ANALYTICS
 
-# These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that models in this project can be
-# found in the "models/" directory. You probably won't need to change these!
+  snowflake_file_formats:
+    - name: CSV_FORMAT_DEFAULT
+      options: |
+        TYPE = CSV
+        FIELD_DELIMITER = ','
+        SKIP_HEADER = 1
+        ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
+        TRIM_SPACE = TRUE
+    - name: CSV_NO_HEADER
+      options: |
+        TYPE = CSV
+        FIELD_DELIMITER = ','
+        SKIP_HEADER = 0
+        TRIM_SPACE = TRUE
+    - name: JSON_FORMAT_STRIP_OUTER_ARRAY
+      options: |
+        TYPE = JSON
+        STRIP_OUTER_ARRAY = TRUE
+        ALLOW_DUPLICATE = FALSE
+    - name: PARQUET_FORMAT_DEFAULT
+      options: |
+        TYPE = PARQUET
+
+  snowflake_stages:
+    - name: S3_QUICKSTART
+      url: 's3://sfquickstarts/tastybytes/'
+      file_format_ref: CSV_FORMAT_DEFAULT
+    - name: AZURE_DATA_LAKE_EXAMPLE
+      url: 'azure://azuresnowflake.blob.core.windows.net/testdata/'
+      file_format_ref: PARQUET_FORMAT_DEFAULT
+    - name: MY_PRIVATE_S3_STAGE
+      url: 's3://my-private-bucket/data/'
+      file_format_ref: CSV_NO_HEADER
+
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
-macro-paths: ["macros"]
+# --- IMPORTANT CHANGE HERE: Added "macros/utils" to macro-paths ---
+macro-paths: ["macros", "macros/utils"]
+# --- End of change ---
 snapshot-paths: ["snapshots"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+clean-targets:
   - "target"
   - "dbt_packages"
 
 
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
 models:
-  dbt_project_2:
-    # Config indicated by + and applies to all files under models/example/
+  jaffle_shop: # This is your project name
     example:
       +materialized: view
