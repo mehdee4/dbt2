@@ -2,7 +2,7 @@
 
 name: 'dbt_project_2'
 version: '1.0.0'
-profile: 'jaffle_shop'
+profile: 'dbt_project_2'
 
 vars:
   snowflake_schemas:
@@ -61,6 +61,6 @@ clean-targets:
 
 
 models:
-  jaffle_shop: # This is your project name
+  dbt_project_2: # This is your project name
     example:
       +materialized: view
