@@ -14393,3 +14393,531 @@ ALLOW_DUPLICATE = FALSE
 [0m11:09:35.216964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107de0040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106994040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069169e0>]}
 [0m11:09:35.217142 [debug] [MainThread]: Flushing usage events
 [0m11:09:36.048481 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:09:07.582936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d28040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071ff790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071ffb20>]}
+
+
+============================== 12:09:07.585505 | afd56a50-53f6-4d22-bfab-99b8c1c68aa1 ==============================
+[0m12:09:07.585505 [info ] [MainThread]: Running with dbt=1.10.2
+[0m12:09:07.585773 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/mehdiafsharha/Documents/dbt2/dbt_project_2/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/mehdiafsharha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select config', 'send_anonymous_usage_stats': 'True'}
+[0m12:09:07.904195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'afd56a50-53f6-4d22-bfab-99b8c1c68aa1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071cfe50>]}
+[0m12:09:07.930655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'afd56a50-53f6-4d22-bfab-99b8c1c68aa1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c944f0>]}
+[0m12:09:07.931459 [info ] [MainThread]: Registered adapter: snowflake=1.10.0-rc2
+[0m12:09:08.003292 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m12:09:08.110393 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:09:08.110716 [debug] [MainThread]: Partial parsing: updated file: dbt_project_2://macros/object_creation/create_snowflake_file_formats.sql
+[0m12:09:08.199868 [info ] [MainThread]: Created and granted role CONFIG_READER_DEV for schema DBT_DEV.CONFIG in dev environment
+[0m12:09:08.203666 [info ] [MainThread]: --- Starting to create Snowflake File Formats in DBT_DEV.CONFIG ---
+[0m12:09:08.208058 [error] [MainThread]: Encountered an error:
+Compilation Error in model test (models/config/test.sql)
+  'None' has no attribute 'table'
+[0m12:09:08.209904 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.67040384, "process_in_blocks": "0", "process_kernel_time": 0.164674, "process_mem_max_rss": "136773632", "process_out_blocks": "0", "process_user_time": 0.938056}
+[0m12:09:08.210273 [debug] [MainThread]: Command `dbt run` failed at 12:09:08.210162 after 0.67 seconds
+[0m12:09:08.210458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d28040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061de680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108426aa0>]}
+[0m12:09:08.210630 [debug] [MainThread]: Flushing usage events
+[0m12:09:09.002477 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:09:24.366408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078100a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ce7850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ce7ac0>]}
+
+
+============================== 12:09:24.369058 | 65349d96-27fd-4467-91f5-47b35356a4b4 ==============================
+[0m12:09:24.369058 [info ] [MainThread]: Running with dbt=1.10.2
+[0m12:09:24.369367 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/mehdiafsharha/Documents/dbt2/dbt_project_2/logs', 'profiles_dir': '/Users/mehdiafsharha/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --select config', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:09:24.665918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109761bd0>]}
+[0m12:09:24.692813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108adbbe0>]}
+[0m12:09:24.693680 [info ] [MainThread]: Registered adapter: snowflake=1.10.0-rc2
+[0m12:09:24.766046 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m12:09:24.874876 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:09:24.875097 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:09:24.899532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e3c130>]}
+[0m12:09:24.947364 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/manifest.json
+[0m12:09:24.951365 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/semantic_manifest.json
+[0m12:09:24.979058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e21600>]}
+[0m12:09:24.979296 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 648 macros
+[0m12:09:24.979460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e20100>]}
+[0m12:09:24.980027 [info ] [MainThread]: 
+[0m12:09:24.980190 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:09:24.980323 [info ] [MainThread]: 
+[0m12:09:24.980542 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:09:24.980938 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DEV'
+[0m12:09:25.051789 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV"
+[0m12:09:25.052024 [debug] [ThreadPool]: On list_DBT_DEV: show terse schemas in database DBT_DEV
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV"} */
+[0m12:09:25.052166 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:09:26.636922 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 1.584 seconds
+[0m12:09:26.642176 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_DEV, now list_DBT_DEV_STG_SAP)
+[0m12:09:26.643280 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DEV_PUBLIC'
+[0m12:09:26.650533 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DEV_CONFIG'
+[0m12:09:26.661869 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_STG_SAP"
+[0m12:09:26.664375 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_PUBLIC"
+[0m12:09:26.666622 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_CONFIG"
+[0m12:09:26.666881 [debug] [ThreadPool]: On list_DBT_DEV_STG_SAP: alter session set quoted_identifiers_ignore_case = false
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_STG_SAP"} */;
+[0m12:09:26.667121 [debug] [ThreadPool]: On list_DBT_DEV_PUBLIC: alter session set quoted_identifiers_ignore_case = false
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_PUBLIC"} */;
+[0m12:09:26.667349 [debug] [ThreadPool]: On list_DBT_DEV_CONFIG: alter session set quoted_identifiers_ignore_case = false
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_CONFIG"} */;
+[0m12:09:26.668161 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:09:26.668742 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:09:26.904455 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.237 seconds
+[0m12:09:26.909459 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_STG_SAP"
+[0m12:09:26.909962 [debug] [ThreadPool]: On list_DBT_DEV_STG_SAP: show objects in DBT_DEV.STG_SAP
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_STG_SAP"} */;
+[0m12:09:27.184547 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.274 seconds
+[0m12:09:27.186932 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_STG_SAP"
+[0m12:09:27.187388 [debug] [ThreadPool]: On list_DBT_DEV_STG_SAP: alter session unset quoted_identifiers_ignore_case
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_STG_SAP"} */;
+[0m12:09:27.462761 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.275 seconds
+[0m12:09:27.730080 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.062 seconds
+[0m12:09:27.731570 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_PUBLIC"
+[0m12:09:27.731848 [debug] [ThreadPool]: On list_DBT_DEV_PUBLIC: show objects in DBT_DEV.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_PUBLIC"} */;
+[0m12:09:27.744698 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.076 seconds
+[0m12:09:27.745998 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_CONFIG"
+[0m12:09:27.746298 [debug] [ThreadPool]: On list_DBT_DEV_CONFIG: show objects in DBT_DEV.CONFIG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_CONFIG"} */;
+[0m12:09:27.963872 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.217 seconds
+[0m12:09:27.965483 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_CONFIG"
+[0m12:09:27.965760 [debug] [ThreadPool]: On list_DBT_DEV_CONFIG: alter session unset quoted_identifiers_ignore_case
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_CONFIG"} */;
+[0m12:09:27.983495 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.251 seconds
+[0m12:09:27.985332 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_PUBLIC"
+[0m12:09:27.985621 [debug] [ThreadPool]: On list_DBT_DEV_PUBLIC: alter session unset quoted_identifiers_ignore_case
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_PUBLIC"} */;
+[0m12:09:28.208078 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.242 seconds
+[0m12:09:28.232938 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.247 seconds
+[0m12:09:28.237129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e42620>]}
+[0m12:09:28.246827 [debug] [Thread-1 (]: Began running node model.dbt_project_2.test
+[0m12:09:28.247607 [info ] [Thread-1 (]: 1 of 1 START sql table model CONFIG.test ....................................... [RUN]
+[0m12:09:28.248211 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_DBT_DEV_STG_SAP, now model.dbt_project_2.test)
+[0m12:09:28.248647 [debug] [Thread-1 (]: Began compiling node model.dbt_project_2.test
+[0m12:09:28.258983 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project_2.test"
+[0m12:09:28.261775 [debug] [Thread-1 (]: Began executing node model.dbt_project_2.test
+[0m12:09:28.285611 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project_2.test"
+[0m12:09:28.291119 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:28.291464 [debug] [Thread-1 (]: On model.dbt_project_2.test: create or replace transient table DBT_DEV.CONFIG.test
+    
+    
+    
+    as (SELECT
+*
+FROM
+    DBT_DEV.public.raw_menu_data
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:29.588907 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.297 seconds
+[0m12:09:29.595899 [info ] [Thread-1 (]: Created and granted role CONFIG_READER_DEV for schema DBT_DEV.CONFIG in dev environment
+[0m12:09:29.596949 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:29.597253 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- Start a transaction for these DDL operations
+BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:29.873786 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.276 seconds
+[0m12:09:29.874934 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:29.875654 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 1. Create the new role if it doesn't already exist
+CREATE ROLE IF NOT EXISTS "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:30.100721 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.225 seconds
+[0m12:09:30.101094 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:30.101291 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 2. Grant USAGE on the database to the new role
+GRANT USAGE ON DATABASE "DBT_DEV" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:30.428234 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.326 seconds
+[0m12:09:30.429747 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:30.430417 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 3. Grant USAGE on the schema to the new role
+--    This is crucial for the role to 'see' the schema
+GRANT USAGE ON SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:30.667823 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.237 seconds
+[0m12:09:30.669119 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:30.669695 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 4. Grant SELECT on ALL *EXISTING* tables in the schema to the new role
+GRANT SELECT ON ALL TABLES IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:30.908269 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.238 seconds
+[0m12:09:30.909276 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:30.909995 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 5. Grant SELECT on ALL *FUTURE* tables in the schema to the new role
+--    This ensures that newly materialized models automatically get the grant
+GRANT SELECT ON FUTURE TABLES IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:31.157090 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.246 seconds
+[0m12:09:31.157788 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:31.158210 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 6. Grant SELECT on ALL *EXISTING* views in the schema to the new role
+GRANT SELECT ON ALL VIEWS IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:31.355620 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.197 seconds
+[0m12:09:31.356785 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:31.357439 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 7. Grant SELECT on ALL *FUTURE* views in the schema to the new role
+--    This ensures that newly materialized views automatically get the grant
+GRANT SELECT ON FUTURE VIEWS IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:31.593353 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.235 seconds
+[0m12:09:31.594378 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:31.595057 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- Commit the transaction
+COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:31.861472 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.266 seconds
+[0m12:09:31.872797 [info ] [Thread-1 (]: --- Starting to create/replace Snowflake File Formats in DBT_DEV.CONFIG ---
+[0m12:09:31.873463 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT"
+[0m12:09:31.874434 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:31.874883 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT"
+TYPE = CSV
+FIELD_DELIMITER = ','
+SKIP_HEADER = 1
+ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
+TRIM_SPACE = TRUE
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:32.160722 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.285 seconds
+[0m12:09:32.162833 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT" created/updated successfully.
+[0m12:09:32.163539 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."CSV_NO_HEADER"
+[0m12:09:32.164492 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:32.164963 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."CSV_NO_HEADER"
+TYPE = CSV
+FIELD_DELIMITER = ','
+SKIP_HEADER = 0
+TRIM_SPACE = TRUE
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:32.457002 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.291 seconds
+[0m12:09:32.459434 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."CSV_NO_HEADER" created/updated successfully.
+[0m12:09:32.460021 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."JSON_FORMAT_STRIP_OUTER_ARRAY"
+[0m12:09:32.461036 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:32.461562 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."JSON_FORMAT_STRIP_OUTER_ARRAY"
+TYPE = JSON
+STRIP_OUTER_ARRAY = TRUE
+ALLOW_DUPLICATE = FALSE
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:32.780553 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.318 seconds
+[0m12:09:32.782448 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."JSON_FORMAT_STRIP_OUTER_ARRAY" created/updated successfully.
+[0m12:09:32.782993 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT"
+[0m12:09:32.783748 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:32.784130 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT"
+TYPE = PARQUET
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:33.070322 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.286 seconds
+[0m12:09:33.072458 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT" created/updated successfully.
+[0m12:09:33.073122 [info ] [Thread-1 (]: --- Finished creating/replacing Snowflake File Formats ---
+[0m12:09:33.089071 [info ] [Thread-1 (]: --- Starting to create Snowflake Stages (IF NOT EXISTS) in DBT_DEV.CONFIG ---
+[0m12:09:33.089787 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:33.089998 [debug] [Thread-1 (]: On model.dbt_project_2.test: SHOW STAGES LIKE 'S3_QUICKSTART' IN SCHEMA DBT_DEV."CONFIG"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:33.317367 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.227 seconds
+[0m12:09:33.320295 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."S3_QUICKSTART" already exists. Skipping creation.
+[0m12:09:33.321511 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:33.321951 [debug] [Thread-1 (]: On model.dbt_project_2.test: SHOW STAGES LIKE 'AZURE_DATA_LAKE_EXAMPLE' IN SCHEMA DBT_DEV."CONFIG"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:33.539215 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.217 seconds
+[0m12:09:33.542003 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."AZURE_DATA_LAKE_EXAMPLE" already exists. Skipping creation.
+[0m12:09:33.543046 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:33.543534 [debug] [Thread-1 (]: On model.dbt_project_2.test: SHOW STAGES LIKE 'MY_PRIVATE_S3_STAGE' IN SCHEMA DBT_DEV."CONFIG"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:33.759935 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.216 seconds
+[0m12:09:33.762564 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."MY_PRIVATE_S3_STAGE" already exists. Skipping creation.
+[0m12:09:33.763863 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:09:33.764429 [debug] [Thread-1 (]: On model.dbt_project_2.test: SHOW STAGES LIKE 'S3_QUICKSTART_test' IN SCHEMA DBT_DEV."CONFIG"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:09:33.997670 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.233 seconds
+[0m12:09:33.999854 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."S3_QUICKSTART_test" already exists. Skipping creation.
+[0m12:09:34.000599 [info ] [Thread-1 (]: --- Finished creating Snowflake Stages ---
+[0m12:09:34.025647 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65349d96-27fd-4467-91f5-47b35356a4b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106607190>]}
+[0m12:09:34.026272 [info ] [Thread-1 (]: 1 of 1 OK created sql table model CONFIG.test .................................. [[32mSUCCESS 1[0m in 5.78s]
+[0m12:09:34.026661 [debug] [Thread-1 (]: Finished running node model.dbt_project_2.test
+[0m12:09:34.027419 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:09:34.027579 [debug] [MainThread]: Connection 'model.dbt_project_2.test' was left open.
+[0m12:09:34.027725 [debug] [MainThread]: On model.dbt_project_2.test: Close
+[0m12:09:34.392121 [debug] [MainThread]: Connection 'list_DBT_DEV_PUBLIC' was left open.
+[0m12:09:34.392845 [debug] [MainThread]: On list_DBT_DEV_PUBLIC: Close
+[0m12:09:35.064727 [debug] [MainThread]: Connection 'list_DBT_DEV_CONFIG' was left open.
+[0m12:09:35.065390 [debug] [MainThread]: On list_DBT_DEV_CONFIG: Close
+[0m12:09:35.451819 [info ] [MainThread]: 
+[0m12:09:35.452912 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 10.47 seconds (10.47s).
+[0m12:09:35.454149 [debug] [MainThread]: Command end result
+[0m12:09:35.533924 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/manifest.json
+[0m12:09:35.537275 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/semantic_manifest.json
+[0m12:09:35.541033 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/run_results.json
+[0m12:09:35.541215 [info ] [MainThread]: 
+[0m12:09:35.541414 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:09:35.541559 [info ] [MainThread]: 
+[0m12:09:35.541711 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:09:35.543727 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.212183, "process_in_blocks": "0", "process_kernel_time": 0.243271, "process_mem_max_rss": "155795456", "process_out_blocks": "0", "process_user_time": 1.531326}
+[0m12:09:35.543938 [debug] [MainThread]: Command `dbt run` succeeded at 12:09:35.543899 after 11.21 seconds
+[0m12:09:35.544128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078100a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106758af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e1510>]}
+[0m12:09:35.544310 [debug] [MainThread]: Flushing usage events
+[0m12:09:36.182861 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:11:06.903041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105828070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10688f7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10688faf0>]}
+
+
+============================== 12:11:06.905837 | fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73 ==============================
+[0m12:11:06.905837 [info ] [MainThread]: Running with dbt=1.10.2
+[0m12:11:06.906111 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/mehdiafsharha/Documents/dbt2/dbt_project_2/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/mehdiafsharha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select config', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:11:07.223382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106858760>]}
+[0m12:11:07.250194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106826620>]}
+[0m12:11:07.250949 [info ] [MainThread]: Registered adapter: snowflake=1.10.0-rc2
+[0m12:11:07.322853 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m12:11:07.434558 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:11:07.434780 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:11:07.459492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079e4130>]}
+[0m12:11:07.507937 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/manifest.json
+[0m12:11:07.511467 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/semantic_manifest.json
+[0m12:11:07.537914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079ca290>]}
+[0m12:11:07.538142 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 648 macros
+[0m12:11:07.538312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079c80a0>]}
+[0m12:11:07.538848 [info ] [MainThread]: 
+[0m12:11:07.539012 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:11:07.539149 [info ] [MainThread]: 
+[0m12:11:07.539375 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:11:07.539739 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DEV'
+[0m12:11:07.612782 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV"
+[0m12:11:07.613038 [debug] [ThreadPool]: On list_DBT_DEV: show terse schemas in database DBT_DEV
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV"} */
+[0m12:11:07.613191 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:11:08.968971 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 1.355 seconds
+[0m12:11:08.974141 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_DEV, now list_DBT_DEV_STG_SAP)
+[0m12:11:08.975044 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DEV_CONFIG'
+[0m12:11:08.976178 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DEV_PUBLIC'
+[0m12:11:08.991500 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_STG_SAP"
+[0m12:11:08.993900 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_CONFIG"
+[0m12:11:08.996130 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_PUBLIC"
+[0m12:11:08.996427 [debug] [ThreadPool]: On list_DBT_DEV_STG_SAP: alter session set quoted_identifiers_ignore_case = false
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_STG_SAP"} */;
+[0m12:11:08.996708 [debug] [ThreadPool]: On list_DBT_DEV_CONFIG: alter session set quoted_identifiers_ignore_case = false
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_CONFIG"} */;
+[0m12:11:08.996972 [debug] [ThreadPool]: On list_DBT_DEV_PUBLIC: alter session set quoted_identifiers_ignore_case = false
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_PUBLIC"} */;
+[0m12:11:08.998103 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:11:08.998458 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:11:09.209303 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.212 seconds
+[0m12:11:09.212571 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_STG_SAP"
+[0m12:11:09.212882 [debug] [ThreadPool]: On list_DBT_DEV_STG_SAP: show objects in DBT_DEV.STG_SAP
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_STG_SAP"} */;
+[0m12:11:09.451461 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.238 seconds
+[0m12:11:09.455033 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_STG_SAP"
+[0m12:11:09.455605 [debug] [ThreadPool]: On list_DBT_DEV_STG_SAP: alter session unset quoted_identifiers_ignore_case
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_STG_SAP"} */;
+[0m12:11:09.700851 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.245 seconds
+[0m12:11:10.152511 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.154 seconds
+[0m12:11:10.153914 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.156 seconds
+[0m12:11:10.157027 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_PUBLIC"
+[0m12:11:10.159162 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_CONFIG"
+[0m12:11:10.159736 [debug] [ThreadPool]: On list_DBT_DEV_PUBLIC: show objects in DBT_DEV.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_PUBLIC"} */;
+[0m12:11:10.160220 [debug] [ThreadPool]: On list_DBT_DEV_CONFIG: show objects in DBT_DEV.CONFIG
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_CONFIG"} */;
+[0m12:11:10.440303 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.280 seconds
+[0m12:11:10.441440 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.280 seconds
+[0m12:11:10.443943 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_PUBLIC"
+[0m12:11:10.445720 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DEV_CONFIG"
+[0m12:11:10.446176 [debug] [ThreadPool]: On list_DBT_DEV_PUBLIC: alter session unset quoted_identifiers_ignore_case
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_PUBLIC"} */;
+[0m12:11:10.446599 [debug] [ThreadPool]: On list_DBT_DEV_CONFIG: alter session unset quoted_identifiers_ignore_case
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "connection_name": "list_DBT_DEV_CONFIG"} */;
+[0m12:11:10.689068 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.241 seconds
+[0m12:11:10.703472 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.256 seconds
+[0m12:11:10.708471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079ea4d0>]}
+[0m12:11:10.716275 [debug] [Thread-1 (]: Began running node model.dbt_project_2.test
+[0m12:11:10.717120 [info ] [Thread-1 (]: 1 of 1 START sql table model CONFIG.test ....................................... [RUN]
+[0m12:11:10.717838 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_DBT_DEV_STG_SAP, now model.dbt_project_2.test)
+[0m12:11:10.718367 [debug] [Thread-1 (]: Began compiling node model.dbt_project_2.test
+[0m12:11:10.730646 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project_2.test"
+[0m12:11:10.733353 [debug] [Thread-1 (]: Began executing node model.dbt_project_2.test
+[0m12:11:10.758394 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project_2.test"
+[0m12:11:10.761606 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:10.761857 [debug] [Thread-1 (]: On model.dbt_project_2.test: create or replace transient table DBT_DEV.CONFIG.test
+    
+    
+    
+    as (SELECT
+*
+FROM
+    DBT_DEV.public.raw_menu_data
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:12.182326 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.420 seconds
+[0m12:11:12.191961 [info ] [Thread-1 (]: Created and granted role CONFIG_READER_DEV for schema DBT_DEV.CONFIG in dev environment
+[0m12:11:12.193747 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:12.194291 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- Start a transaction for these DDL operations
+BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:12.436267 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.241 seconds
+[0m12:11:12.438151 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:12.439173 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 1. Create the new role if it doesn't already exist
+CREATE ROLE IF NOT EXISTS "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:12.668950 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.229 seconds
+[0m12:11:12.670553 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:12.671913 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 2. Grant USAGE on the database to the new role
+GRANT USAGE ON DATABASE "DBT_DEV" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:12.919064 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.246 seconds
+[0m12:11:12.920663 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:12.922114 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 3. Grant USAGE on the schema to the new role
+--    This is crucial for the role to 'see' the schema
+GRANT USAGE ON SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:13.151171 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.228 seconds
+[0m12:11:13.152873 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:13.153635 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 4. Grant SELECT on ALL *EXISTING* tables in the schema to the new role
+GRANT SELECT ON ALL TABLES IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:13.357328 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.203 seconds
+[0m12:11:13.358494 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:13.359186 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 5. Grant SELECT on ALL *FUTURE* tables in the schema to the new role
+--    This ensures that newly materialized models automatically get the grant
+GRANT SELECT ON FUTURE TABLES IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:13.618596 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.259 seconds
+[0m12:11:13.619764 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:13.620592 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 6. Grant SELECT on ALL *EXISTING* views in the schema to the new role
+GRANT SELECT ON ALL VIEWS IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:13.845363 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.224 seconds
+[0m12:11:13.846957 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:13.848071 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- 7. Grant SELECT on ALL *FUTURE* views in the schema to the new role
+--    This ensures that newly materialized views automatically get the grant
+GRANT SELECT ON FUTURE VIEWS IN SCHEMA "DBT_DEV"."CONFIG" TO ROLE "CONFIG_READER_DEV"
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:14.125189 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.276 seconds
+[0m12:11:14.126791 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:14.127864 [debug] [Thread-1 (]: On model.dbt_project_2.test: -- Commit the transaction
+COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:14.384163 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.255 seconds
+[0m12:11:14.396367 [info ] [Thread-1 (]: --- Starting to create/replace Snowflake File Formats in DBT_DEV.CONFIG ---
+[0m12:11:14.397447 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT"
+[0m12:11:14.398673 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:14.399336 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT"
+TYPE = CSV
+FIELD_DELIMITER = ','
+SKIP_HEADER = 1
+ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
+TRIM_SPACE = TRUE
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:14.695355 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.295 seconds
+[0m12:11:14.698301 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT" created/updated successfully.
+[0m12:11:14.699088 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."CSV_NO_HEADER"
+[0m12:11:14.700269 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:14.700810 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."CSV_NO_HEADER"
+TYPE = CSV
+FIELD_DELIMITER = ','
+SKIP_HEADER = 0
+TRIM_SPACE = TRUE
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:14.938929 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.237 seconds
+[0m12:11:14.941829 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."CSV_NO_HEADER" created/updated successfully.
+[0m12:11:14.942640 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."JSON_FORMAT_STRIP_OUTER_ARRAY"
+[0m12:11:14.943883 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:14.944401 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."JSON_FORMAT_STRIP_OUTER_ARRAY"
+TYPE = JSON
+STRIP_OUTER_ARRAY = TRUE
+ALLOW_DUPLICATE = FALSE
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:15.183275 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.238 seconds
+[0m12:11:15.186522 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."JSON_FORMAT_STRIP_OUTER_ARRAY" created/updated successfully.
+[0m12:11:15.187122 [info ] [Thread-1 (]: Creating/Replacing Snowflake File Format: "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT"
+[0m12:11:15.187887 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:15.188308 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE FILE FORMAT "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT"
+TYPE = PARQUET
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:15.444107 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.255 seconds
+[0m12:11:15.446949 [info ] [Thread-1 (]: File Format "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT" created/updated successfully.
+[0m12:11:15.447770 [info ] [Thread-1 (]: --- Finished creating/replacing Snowflake File Formats ---
+[0m12:11:15.466353 [info ] [Thread-1 (]: --- Starting to create/replace Snowflake Stages in DBT_DEV.CONFIG ---
+[0m12:11:15.467037 [info ] [Thread-1 (]: Creating/Replacing Snowflake Stage: "DBT_DEV"."CONFIG"."S3_QUICKSTART"
+[0m12:11:15.467735 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:15.468074 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE STAGE "DBT_DEV"."CONFIG"."S3_QUICKSTART"
+URL = 's3://sfquickstarts/tastybytes/'
+
+FILE_FORMAT = "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT"
+
+
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:15.769406 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.301 seconds
+[0m12:11:15.772828 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."S3_QUICKSTART" created/updated successfully.
+[0m12:11:15.773850 [info ] [Thread-1 (]: Creating/Replacing Snowflake Stage: "DBT_DEV"."CONFIG"."AZURE_DATA_LAKE_EXAMPLE"
+[0m12:11:15.775130 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:15.775738 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE STAGE "DBT_DEV"."CONFIG"."AZURE_DATA_LAKE_EXAMPLE"
+URL = 'azure://azuresnowflake.blob.core.windows.net/testdata/'
+
+FILE_FORMAT = "DBT_DEV"."CONFIG"."PARQUET_FORMAT_DEFAULT"
+
+
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:16.072020 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.295 seconds
+[0m12:11:16.074863 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."AZURE_DATA_LAKE_EXAMPLE" created/updated successfully.
+[0m12:11:16.075717 [info ] [Thread-1 (]: Creating/Replacing Snowflake Stage: "DBT_DEV"."CONFIG"."MY_PRIVATE_S3_STAGE"
+[0m12:11:16.076720 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:16.077234 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE STAGE "DBT_DEV"."CONFIG"."MY_PRIVATE_S3_STAGE"
+URL = 's3://my-private-bucket/data/'
+
+FILE_FORMAT = "DBT_DEV"."CONFIG"."CSV_NO_HEADER"
+
+
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:16.587134 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.509 seconds
+[0m12:11:16.588488 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."MY_PRIVATE_S3_STAGE" created/updated successfully.
+[0m12:11:16.588892 [info ] [Thread-1 (]: Creating/Replacing Snowflake Stage: "DBT_DEV"."CONFIG"."S3_QUICKSTART_test"
+[0m12:11:16.589527 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_project_2.test"
+[0m12:11:16.589819 [debug] [Thread-1 (]: On model.dbt_project_2.test: CREATE OR REPLACE STAGE "DBT_DEV"."CONFIG"."S3_QUICKSTART_test"
+URL = 's3://sfquickstarts/tastybytes/'
+
+FILE_FORMAT = "DBT_DEV"."CONFIG"."CSV_FORMAT_DEFAULT"
+
+
+
+/* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "dbt_project_2", "target_name": "dev", "node_id": "model.dbt_project_2.test"} */;
+[0m12:11:16.849596 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.259 seconds
+[0m12:11:16.853347 [info ] [Thread-1 (]: Stage "DBT_DEV"."CONFIG"."S3_QUICKSTART_test" created/updated successfully.
+[0m12:11:16.853898 [info ] [Thread-1 (]: --- Finished creating/replacing Snowflake Stages ---
+[0m12:11:16.876839 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe4e9185-f7ec-4ff3-8ee4-0907b4fb7e73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041af160>]}
+[0m12:11:16.877319 [info ] [Thread-1 (]: 1 of 1 OK created sql table model CONFIG.test .................................. [[32mSUCCESS 1[0m in 6.16s]
+[0m12:11:16.877687 [debug] [Thread-1 (]: Finished running node model.dbt_project_2.test
+[0m12:11:16.878380 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:11:16.878580 [debug] [MainThread]: Connection 'model.dbt_project_2.test' was left open.
+[0m12:11:16.878772 [debug] [MainThread]: On model.dbt_project_2.test: Close
+[0m12:11:17.300404 [debug] [MainThread]: Connection 'list_DBT_DEV_CONFIG' was left open.
+[0m12:11:17.301373 [debug] [MainThread]: On list_DBT_DEV_CONFIG: Close
+[0m12:11:17.670582 [debug] [MainThread]: Connection 'list_DBT_DEV_PUBLIC' was left open.
+[0m12:11:17.671567 [debug] [MainThread]: On list_DBT_DEV_PUBLIC: Close
+[0m12:11:18.034106 [info ] [MainThread]: 
+[0m12:11:18.035065 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 10.49 seconds (10.49s).
+[0m12:11:18.036112 [debug] [MainThread]: Command end result
+[0m12:11:18.102549 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/manifest.json
+[0m12:11:18.105903 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/semantic_manifest.json
+[0m12:11:18.109574 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/target/run_results.json
+[0m12:11:18.109773 [info ] [MainThread]: 
+[0m12:11:18.109982 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:11:18.110131 [info ] [MainThread]: 
+[0m12:11:18.110289 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:11:18.112080 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.245047, "process_in_blocks": "0", "process_kernel_time": 0.260364, "process_mem_max_rss": "157384704", "process_out_blocks": "0", "process_user_time": 1.555261}
+[0m12:11:18.112302 [debug] [MainThread]: Command `dbt run` succeeded at 12:11:18.112262 after 11.25 seconds
+[0m12:11:18.112494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105828070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1024f0d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10423e740>]}
+[0m12:11:18.112730 [debug] [MainThread]: Flushing usage events
+[0m12:11:18.898612 [debug] [MainThread]: An error was encountered while trying to flush usage events
