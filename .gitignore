@@ -13,3 +13,4 @@ venv/
  
 # Ignore sensitive config
 .dbt/
+dbt_internal_packages/
