@@ -1,0 +1,51 @@
+# models/src/salesforce/salesforce.yml
+
+version: 2
+
+sources:
+  - name: salesforce # This is your source name
+    description: "Raw data ingested from the Salesforce CRM system."
+    database: "{{ target.database }}" # Uses the database from your dbt profile/target
+    schema: "sources" # <--- UPDATED: Explicitly setting the schema to 'sources'
+
+    tables:
+      - name: salesforce_customers # This is the name of your seed file (without .csv)
+        description: "Raw customer data from Salesforce, loaded via dbt seed."
+        loaded_at_field: "updated_at"
+        identifier: "salesforce_customers"
+
+        columns:
+          - name: customer_id
+            description: "Unique identifier for the customer."
+            tests:
+              - unique
+              - not_null
+          - name: customer_name
+            description: "Full name of the customer."
+          - name: email
+            description: "Customer's email address."
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+          - name: status
+            description: "Current status of the customer (e.g., ACTIVE, INACTIVE, PENDING)."
+            tests:
+              - dbt_expectations.expect_column_values_to_be_in_set:
+                  value_set: ["ACTIVE", "INACTIVE", "PENDING", "DEACTIVATED"]
+          - name: address
+            description: "Customer's primary address."
+          - name: country
+            description: "Country of the customer."
+          - name: created_at
+            description: "Timestamp when the customer record was first created in Salesforce."
+            tests:
+              - dbt_expectations.expect_column_values_to_be_increasing
+          - name: updated_at
+            description: "Timestamp when the customer record was last updated in Salesforce."
+            tests:
+              - not_null
+
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}

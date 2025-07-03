@@ -5,28 +5,51 @@ version: '1.0.0'                        # version number of your dbt project. Al
 profile: 'dbt_project_2'                # It specifies which database connection profile (defined in your profiles.yml file) this dbt project should use when interacting with your data warehouse.
 packages-install-path: "dbt_packages"   # This is the default and usually doesn't need to be explicitly set
 
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+docs-paths: ["docs"]
+
+
 vars:
-  snowflake_schemas:
-    - name: CONFIGS
-    - name: RAW_DATA
-    - name: STG_PIM
-    - name: STG_SAP
-    - name: ANALYTICS
+#don't put semicolons in variables
+#follow the stracture of existing variables closely
 
   snowflake_file_formats:
-    - name: CSV_FORMAT_DEFAULT
+
+    - name: CSV_WITH_HEADER_DEFAULT
       options: |
         TYPE = CSV
         FIELD_DELIMITER = ','
         SKIP_HEADER = 1
         ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
         TRIM_SPACE = TRUE
-    - name: CSV_NO_HEADER
+        EMPTY_FIELD_AS_NULL = TRUE
+        NULL_IF = ('', 'NULL', 'null')
+
+    - name: CSV_WITHOUT_HEADER_DEFAULT
       options: |
         TYPE = CSV
         FIELD_DELIMITER = ','
         SKIP_HEADER = 0
+        ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
         TRIM_SPACE = TRUE
+        EMPTY_FIELD_AS_NULL = TRUE
+        NULL_IF = ('', 'NULL', 'null')
+
+    - name: CSV_WITHOUT_HEADER_GZIP
+      options: |
+        TYPE = CSV
+        FIELD_DELIMITER = ','
+        SKIP_HEADER = 1
+        ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
+        TRIM_SPACE = TRUE
+        COMPRESSION = GZIP
+
+        
     - name: JSON_FORMAT_STRIP_OUTER_ARRAY
       options: |
         TYPE = JSON
@@ -39,39 +62,54 @@ vars:
   snowflake_stages:
     - name: S3_QUICKSTART
       url: 's3://sfquickstarts/tastybytes/'
-      file_format_ref: CSV_FORMAT_DEFAULT
-    - name: AZURE_DATA_LAKE_EXAMPLE
-      url: 'azure://azuresnowflake.blob.core.windows.net/testdata/'
-      file_format_ref: PARQUET_FORMAT_DEFAULT
-    - name: MY_PRIVATE_S3_STAGE
-      url: 's3://my-private-bucket/data/'
-      file_format_ref: CSV_NO_HEADER
-    - name: S3_QUICKSTART_test
-      url: 's3://sfquickstarts/tastybytes/'
-      file_format_ref: CSV_FORMAT_DEFAULT
+      file_format_ref: CSV_WITH_HEADER_DEFAULT
 
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
+    - name: int_stage_customer
+      is_internal: true 
+      file_format_ref: CSV_WITH_HEADER_DEFAULT
+      directory: true
 
-# used to configure which directories dbt should delete when you run the dbt clean command.
-clean-targets:
+
+# 
+
+seeds:
+  dbt_project_2: # project name
+    +schema: 'sources' # This is the schema where the seed data will be loaded.
+    +materialized: seed # This specifies how the seed data will be materialized in the database. Its optional!
+
+
+clean-targets: # used to configure which directories dbt should delete when you run the dbt clean command.
   - "target"
   - "dbt_packages"
 
 
 models:
   dbt_project_2: 
-    stage: 
-      stg_sap: # Configuration specific to the 'stg_sap' subdirectory within 'stage'
-        +schema: stg_sap # Use +schema to explicitly set it to 'stg_sap', overriding any default- # This will create the schema 'stg_sap'
-        +materialized: table
-        +transient: true 
-        +post-hook:
-          - "{{ create_and_grant_schema_role(this.database, this.schema, target.name) }}"
+
+    config: 
+      +schema: config 
+      +post-hook:
+        - "{{ create_and_grant_schema_role(this.database, this.schema, target.name) }}"
+        - "{{ create_snowflake_file_formats(this.database, this.schema) }}"
+        - "{{ create_snowflake_stages(this.database, this.schema) }}"
+    sources: 
+      +schema: source
+      +materialized: table
+      +transient: true 
+      +post-hook:
+        - "{{ create_and_grant_schema_role(this.database, this.schema, target.name) }}"
+        - "{{ create_snowflake_file_formats(this.database, this.schema) }}"
+        - "{{ create_snowflake_stages(this.database, this.schema) }}"
+    stages: 
+      +schema: stage
+      +materialized: table
+      +transient: false
+      +post-hook:
+        - "{{ create_and_grant_schema_role(this.database, this.schema, target.name) }}"
+      +persist_docs: # PUBLISH model descriptions to the database
+        relation: true 
+        columns: true  
+
         #+grants:  
             #    allows you to automatically apply SQL GRANT statements to the database objects (tables and views) that dbt creates or updates.
             #    example:
@@ -125,7 +163,9 @@ models:
              #         "business_unit": this.meta.business_unit
              #      })
              #     }}';
-
+        #+persist_docs: # PUBLISH model descriptions IN THE YML FILES to the database
+            #relation: true 
+            #columns: true  
         #+docs:
             #     show: true
             #     persist_docs: # Snowflake specific: persists descriptions from .yml files to Snowflake
@@ -136,11 +176,4 @@ models:
             #    Use Case: When the file name isn't suitable for the database object name, or for backward compatibility.
             #    Example:
             #      +alias: sap_menu_data_stg # The model file might be 'stg_menu.sql', but the table will be 'sap_menu_data_stg'
-    config: 
-      +schema: config 
-      +materialized: table
-      +transient: true 
-      +post-hook:
-        - "{{ create_and_grant_schema_role(this.database, this.schema, target.name) }}"
-        - "{{ create_snowflake_file_formats(this.database, this.schema) }}"
-        - "{{ create_snowflake_stages(this.database, this.schema) }}"
+

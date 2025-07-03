@@ -14,3 +14,6 @@ venv/
 # Ignore sensitive config
 .dbt/
 dbt_internal_packages/
+
+#ignore personal files
+admin_scripts/personal_azure_integration.sql

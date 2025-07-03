@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: src_ext_dynamic365
+    description: "Raw customer data from Azure ADLS Gen2 external stage."
+    schema: SOURCE # The external table will be created in the 'SOURCE' schema
+
+    tables:
+      - name: src_ext_dynamic365_customers
+        description: "External table for customer data from staged CSV files."
+        external:
+          location: "@DBT_DEV.CONFIG.MY_AZURE_ADLS_STAGE_V2/customer/" 
+          file_format: "DBT_DEV.CONFIG.CSV_WITH_HEADER_DEFAULT" 
+          pattern: ".*\\.csv" 
+          auto_refresh: false 
+         

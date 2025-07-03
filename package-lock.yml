@@ -5,4 +5,13 @@ packages:
   - name: dbt_external_tables
     package: dbt-labs/dbt_external_tables
     version: 0.11.1
-sha1_hash: 15fed141a874f9485b2fda6c407b4b2262ca2e5e
+  - name: dbt_expectations
+    package: metaplane/dbt_expectations
+    version: 0.10.9
+  - name: dbt_date
+    package: godatadriven/dbt_date
+    version: 0.10.1
+  - name: codegen
+    package: dbt-labs/codegen
+    version: 0.13.1
+sha1_hash: cf5d6e8092c6dd719f69de295b07033ac424fa06

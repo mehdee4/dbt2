@@ -1,0 +1,17 @@
+# models/sources/pos_data_sources.yml
+
+version: 2
+
+sources:
+  - name: src_ext_sap_raw
+    description: "Raw point-of-sale data from S3, accessed via external tables."
+    schema: source
+    
+    tables:
+      - name: src_ext_sap_menu
+        description: "External table for menu item data from 'menu.csv.gz'."
+        external:
+          location: "@\"DBT_DEV\".\"CONFIG\".\"S3_QUICKSTART\"/raw_pos/menu/"
+          file_format: "DBT_DEV.CONFIG.CSV_WITHOUT_HEADER_GZIP"
+          pattern: ".*menu\\.csv\\.gz"
+          auto_refresh: FALSE

@@ -1,0 +1,13 @@
+customer_id,customer_name,email,status,address,country,created_at,updated_at
+101,Alice Smith,alice.smith@example.com,ACTIVE,123 Main St,USA,2023-01-01 10:00:00,2023-01-01 10:00:00
+102,Bob Johnson,bob.johnson@example.com,ACTIVE,456 Oak Ave,Canada,2023-01-05 11:30:00,2023-01-05 11:30:00
+103,Charlie Brown,charlie.b@example.com,INACTIVE,789 Pine Rd,USA,2023-01-10 14:00:00,2023-01-10 14:00:00
+104,Diana Miller,diana.m@example.com,ACTIVE,101 Elm Blvd,UK,2023-01-12 09:15:00,2023-01-12 09:15:00
+105,Eve Davis,eve.davis@example.com,ACTIVE,202 Birch Ct,Germany,2023-01-15 16:45:00,2023-01-15 16:45:00
+106,Frank White,frank.w@example.com,ACTIVE,303 Cedar Dr,France,2023-01-18 08:00:00,2023-01-18 08:00:00
+107,Grace Green,grace.g@example.com,ACTIVE,404 Spruce Ln,Spain,2023-01-20 12:00:00,2023-01-20 12:00:00
+108,Henry Black,henry.b@example.com,PENDING,505 Poplar Pl,Italy,2023-01-22 10:30:00,2023-01-22 10:30:00
+109,Ivy King,ivy.k@example.com,ACTIVE,606 Willow Way,Australia,2023-01-25 15:00:00,2023-01-25 15:00:00
+110,Jack Lee,jack.lee@example.com,ACTIVE,707 Maple Loop,USA,2023-01-28 09:00:00,2023-01-28 09:00:00
+111,Karen Hall,karen.h@example.com,ACTIVE,808 Palm St,USA,2023-02-01 10:00:00,2023-02-01 10:00:00
+112,Liam Scott,liam.s@example.com,ACTIVE,909 Fir Ave,Canada,2023-02-05 11:30:00,2023-02-05 11:30:00
