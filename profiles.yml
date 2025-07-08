@@ -1,0 +1,48 @@
+dbt_project_2:
+  target: dev
+  outputs:
+    dev:
+      account: 'not needed'
+      database: DBT_DEV
+      #password: My!!!!love63?!
+      role: ACCOUNTADMIN
+      schema: PUBLIC
+      threads: 4
+      type: snowflake
+      user: 'not needed'
+      warehouse: COMPUTE_WH
+      query_tag: dbt_dev_run
+      connect_timeout: 10 # Timeout in seconds for establishing a connection to the database
+      connect_retries: 5  # Number of times to retry connecting to the database before failing
+      #grant_config:
+      #  select: ["ANALYTICS_VIEWER_ROLE"] # Example: After building models, grant SELECT to this role by default.
+    
+    test:
+      account: 'not needed'
+      database: DBT_DEST
+      password: My!!!!love63?!
+      role: ACCOUNTADMIN
+      schema: PUBLIC
+      threads: 4
+      type: snowflake
+      user: 'not needed'
+      warehouse: COMPUTE_WH
+      query_tag: dbt_test_run    # A string to append as a query tag to all queries run by dbt. Excellent for auditing
+      connect_timeout: 10 # Timeout in seconds for establishing a connection to the database
+      connect_retries: 5  # Number of times to retry connecting to the database before failing
+
+    prod:
+      account: 'not needed'
+      database: DBT_PROD
+      password: My!!!!love63?!
+      role: ACCOUNTADMIN
+      schema: PUBLIC
+      threads: 4
+      type: snowflake
+      user: 'not needed'
+      warehouse: COMPUTE_WH
+      query_tag: dbt_prod_run
+      connect_timeout: 10 # Timeout in seconds for establishing a connection to the database
+      connect_retries: 5  # Number of times to retry connecting to the database before failing
+
+  
