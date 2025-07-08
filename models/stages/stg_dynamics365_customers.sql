@@ -12,7 +12,7 @@ WITH
             {{ source('src_ext_dynamic365', 'src_ext_dynamic365_customers') }}
     )
 SELECT 
-     {{ generate_table_sk_key(['customer_id', 'customer_name', 'customer_address', 'customer_email', 'last_updated_date']) }},
+     {{ generate_hash_key(['customer_id', 'customer_name', 'customer_address', 'customer_email', 'last_updated_date']) }},
      source_casted.*
      
 FROM

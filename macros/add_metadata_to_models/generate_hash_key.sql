@@ -1,6 +1,6 @@
--- macros/generate_table_sk_key.sql
+-- macros/generate_hash_key.sql
 
-{% macro generate_table_sk_key(columns) -%}
+{% macro generate_hash_key(columns) -%}
     {#
         Generates a Snowflake MD5_BINARY hash key (Surrogate Key) from a list of columns.
         The key is cast to BINARY(16).
@@ -16,8 +16,8 @@
 
     {% if not columns or not columns is iterable or columns is string %}
         {{ exceptions.raise_compiler_error(
-            "The 'generate_table_sk_key' macro requires a list of column names as input. " ~
-            "Example: {{ generate_table_sk_key(['col1', 'col2']) }}"
+            "The 'generate_hash_key' macro requires a list of column names as input. " ~
+            "Example: {{ generate_hash_key(['col1', 'col2']) }}"
         ) }}
     {% endif %}
 
