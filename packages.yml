@@ -1,11 +1,11 @@
 packages:
   - package: dbt-labs/dbt_utils
-    version: [">=1.1.0", "<2.0.0"]
-  - package: dbt-labs/dbt_external_tables # to create external tables
-    version: [">=0.11.0", "<0.12.0"] # As of June 2025, this is a recent stable version.
-  - package: metaplane/dbt_expectations # <--- packagre for data quality tests
-    version: [">=0.10.0", "<0.11.0"]
-  - package: godatadriven/dbt_date # to work with dates and timestamps
-    version: [">=0.10.0", "<0.11.0"] # Keep this version range if you use dbt_date
+    version: 1.3.0
+  - package: dbt-labs/dbt_external_tables
+    version: 0.11.1
+  - package: metaplane/dbt_expectations
+    version: 0.10.9
+  - package: godatadriven/dbt_date
+    version: 0.10.1
   - package: dbt-labs/codegen
     version: 0.13.1

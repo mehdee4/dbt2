@@ -1,68 +1,41 @@
-warning: (will error post beta) dbt1060: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
-  --> models/sources/seed_sources/src_salesforce.yml:49:9
-error: dbt1501: Macro error: unknown function: Jinja macro or function `generate_table_sk_key` is unknown
-(in models/stages/stg_dynamics365_customers_incremental.sql:28)
-  --> models/stages/stg_dynamics365_customers_incremental.sql:28:14
-warning: dbt1000: Warnings marked (will error post beta) will turn into errors before leaving beta. Please fix them.
-suggestion: Try the autofix script: https://github.com/dbt-labs/dbt-autofix
-  Finished 'show' target 'dev' with 1 error and 1 warning in 530ms 182us
-[0m09:58:12.872541 [debug] [MainThread]: Got an exception trying to initialize tracking
 
 
-============================== 09:58:12.885687 | 59ada682-588a-4c42-89d0-955b65f1e738 ==============================
-[0m09:58:12.885687 [info ] [MainThread]: Running with dbt=1.10.2
-[0m09:58:12.886193 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/mehdiafsharha/.dbt', 'log_path': '/Users/mehdiafsharha/Documents/dbt2/dbt_project_2/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
-[0m09:58:12.897389 [info ] [MainThread]: dbt version: 1.10.2
-[0m09:58:12.897614 [info ] [MainThread]: python version: 3.10.18
-[0m09:58:12.897753 [info ] [MainThread]: python path: /Users/mehdiafsharha/Documents/dbt2/.venv_dbt/bin/python3.10
-[0m09:58:12.897886 [info ] [MainThread]: os info: macOS-15.5-arm64-arm-64bit
-[0m09:58:13.127137 [info ] [MainThread]: Using profiles dir at /Users/mehdiafsharha/.dbt
-[0m09:58:13.127386 [info ] [MainThread]: Using profiles.yml file at /Users/mehdiafsharha/.dbt/profiles.yml
-[0m09:58:13.127540 [info ] [MainThread]: Using dbt_project.yml file at /Users/mehdiafsharha/Documents/dbt2/dbt_project_2/dbt_project.yml
-[0m09:58:13.127940 [info ] [MainThread]: adapter type: snowflake
-[0m09:58:13.128077 [info ] [MainThread]: adapter version: 1.10.0rc2
-[0m09:58:13.176402 [info ] [MainThread]: Configuration:
-[0m09:58:13.176684 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
-[0m09:58:13.176831 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
-[0m09:58:13.176971 [info ] [MainThread]: Required dependencies:
-[0m09:58:13.177389 [debug] [MainThread]: Executing "git --help"
-[0m09:58:13.190348 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
-[0m09:58:13.190820 [debug] [MainThread]: STDERR: "b''"
-[0m09:58:13.191001 [info ] [MainThread]:  - git [[32mOK found[0m]
-
-[0m09:58:13.191161 [info ] [MainThread]: Connection:
-[0m09:58:13.191348 [info ] [MainThread]:   account: TXQLMXC-SR42886
-[0m09:58:13.191482 [info ] [MainThread]:   user: mehdee4
-[0m09:58:13.191612 [info ] [MainThread]:   database: DBT_DEV
-[0m09:58:13.191738 [info ] [MainThread]:   warehouse: COMPUTE_WH
-[0m09:58:13.191862 [info ] [MainThread]:   role: ACCOUNTADMIN
-[0m09:58:13.191989 [info ] [MainThread]:   schema: PUBLIC
-[0m09:58:13.192116 [info ] [MainThread]:   authenticator: None
-[0m09:58:13.192239 [info ] [MainThread]:   oauth_client_id: None
-[0m09:58:13.192363 [info ] [MainThread]:   query_tag: dbt_dev_run
-[0m09:58:13.192490 [info ] [MainThread]:   client_session_keep_alive: False
-[0m09:58:13.192616 [info ] [MainThread]:   host: None
-[0m09:58:13.192740 [info ] [MainThread]:   port: None
-[0m09:58:13.192864 [info ] [MainThread]:   proxy_host: None
-[0m09:58:13.192990 [info ] [MainThread]:   proxy_port: None
-[0m09:58:13.193112 [info ] [MainThread]:   protocol: None
-[0m09:58:13.193234 [info ] [MainThread]:   connect_retries: 5
-[0m09:58:13.193357 [info ] [MainThread]:   connect_timeout: 10
-[0m09:58:13.193481 [info ] [MainThread]:   retry_on_database_errors: False
-[0m09:58:13.193609 [info ] [MainThread]:   retry_all: False
-[0m09:58:13.193735 [info ] [MainThread]:   insecure_mode: False
-[0m09:58:13.193860 [info ] [MainThread]:   reuse_connections: True
-[0m09:58:13.194210 [info ] [MainThread]: Registered adapter: snowflake=1.10.0-rc2
-[0m09:58:13.255971 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
-[0m09:58:13.317408 [debug] [MainThread]: Using snowflake connection "debug"
-[0m09:58:13.317616 [debug] [MainThread]: On debug: select 1 as id
-[0m09:58:13.317741 [debug] [MainThread]: Opening a new connection, currently in state init
-[0m09:58:14.248771 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.931 seconds
-[0m09:58:14.251391 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
-
-[0m09:58:14.252064 [info ] [MainThread]: [32mAll checks passed![0m
-[0m09:58:14.258911 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.4177611, "process_in_blocks": "0", "process_kernel_time": 0.180868, "process_mem_max_rss": "142442496", "process_out_blocks": "0", "process_user_time": 0.835312}
-[0m09:58:14.259925 [debug] [MainThread]: Command `dbt debug` succeeded at 09:58:14.259635 after 1.42 seconds
-[0m09:58:14.260512 [debug] [MainThread]: Connection 'debug' was left open.
-[0m09:58:14.260927 [debug] [MainThread]: On debug: Close
-[0m09:58:14.553461 [debug] [MainThread]: Flushing usage events
+============================== 06:06:40.473731 | fd7aa9af-2139-49f3-94b5-7586da9ece99 ==============================
+[0m06:06:40.473731 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:06:40.474974 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'warn_error': 'None', 'log_path': '/tmp/dbt_output/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m06:06:40.735081 [debug] [Dummy-1   ]: Set downloads directory='/tmp/dbt-downloads-z2bp15p1'
+[0m06:06:40.736167 [debug] [Dummy-1   ]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m06:06:40.753083 [debug] [Dummy-1   ]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m06:06:40.754123 [debug] [Dummy-1   ]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m06:06:40.767575 [debug] [Dummy-1   ]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m06:06:40.777475 [debug] [Dummy-1   ]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+[0m06:06:40.795419 [debug] [Dummy-1   ]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+[0m06:06:40.799311 [debug] [Dummy-1   ]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m06:06:40.811578 [debug] [Dummy-1   ]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m06:06:40.817154 [debug] [Dummy-1   ]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m06:06:40.829043 [debug] [Dummy-1   ]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m06:06:40.833704 [debug] [Dummy-1   ]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m06:06:40.844954 [debug] [Dummy-1   ]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m06:06:40.873462 [info ] [Dummy-1   ]: Updating lock file in file path: /tmp/dbt/package-lock.yml
+[0m06:06:40.877344 [debug] [Dummy-1   ]: Set downloads directory='/tmp/dbt-downloads-5bl13osl'
+[0m06:06:40.894072 [info ] [Dummy-1   ]: Installing dbt-labs/dbt_utils
+[0m06:06:41.035922 [info ] [Dummy-1   ]: Installed from version 1.3.0
+[0m06:06:41.036526 [info ] [Dummy-1   ]: Up to date!
+[0m06:06:41.037102 [info ] [Dummy-1   ]: Installing dbt-labs/dbt_external_tables
+[0m06:06:41.163170 [info ] [Dummy-1   ]: Installed from version 0.11.1
+[0m06:06:41.163794 [info ] [Dummy-1   ]: Up to date!
+[0m06:06:41.164356 [info ] [Dummy-1   ]: Installing metaplane/dbt_expectations
+[0m06:06:41.449595 [info ] [Dummy-1   ]: Installed from version 0.10.9
+[0m06:06:41.450188 [info ] [Dummy-1   ]: Up to date!
+[0m06:06:41.450742 [info ] [Dummy-1   ]: Installing godatadriven/dbt_date
+[0m06:06:41.528304 [info ] [Dummy-1   ]: Installed from version 0.10.1
+[0m06:06:41.528922 [info ] [Dummy-1   ]: Updated version available: 0.14.2
+[0m06:06:41.529474 [info ] [Dummy-1   ]: Installing dbt-labs/codegen
+[0m06:06:41.608563 [info ] [Dummy-1   ]: Installed from version 0.13.1
+[0m06:06:41.609138 [info ] [Dummy-1   ]: Up to date!
+[0m06:06:41.609696 [info ] [Dummy-1   ]: 
+[0m06:06:41.610351 [info ] [Dummy-1   ]: Updates available for packages: ['godatadriven/dbt_date']                 
+Update your versions in packages.yml, then run dbt deps
+[0m06:06:41.612766 [debug] [Dummy-1   ]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.2368077, "process_in_blocks": "0", "process_kernel_time": 0.73, "process_mem_max_rss": "395644", "process_out_blocks": "0", "process_user_time": 4.31}
+[0m06:06:41.613476 [debug] [Dummy-1   ]: Command `cli deps` succeeded at 06:06:41.613199 after 1.24 seconds
+[0m06:06:41.614013 [debug] [Dummy-1   ]: Flushing usage events
